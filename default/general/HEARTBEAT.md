@@ -13,7 +13,7 @@ Run this checklist on every heartbeat. This covers both your local planning/memo
 
 ## 2. Local Planning Check
 
-1. Read today's plan from `$AGENT_HOME/Memory/YYYY-MM-DD.md` under "## Today's Plan".
+1. Read today's plan from `$AGENT_HOME/memory/YYYY-MM-DD.md` under "## Today's Plan".
 2. Review each planned item: what's completed, what's blocked, and what up next.
 3. For any blockers, resolve them yourself or escalate to your manager.
 4. If you're ahead, start on the next highest priority.
