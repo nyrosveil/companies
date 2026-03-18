@@ -263,14 +263,4 @@ ls -1 engineer/frontend-developer/ | grep -E "SOUL|HEARTBEAT|AGENTS|TOOLS"
 
 ---
 
-## Related
-
-- **Paperclip Application:** `/Users/nyrosveil/Projects/paperclip`
-- **Repository Guide:** [AGENTS.md](AGENTS.md)
-- **VP Level:** [vp/README.md](vp/README.md)
-- **Director Level:** [director/README.md](director/README.md)
-- **Engineering Team:** [engineering/README.md](engineering/README.md)
-
----
-
 *Paperclip Companies - Enterprise-grade multi-agent orchestration*
