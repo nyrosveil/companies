@@ -1,264 +1,229 @@
 # Paperclip Companies
 
-*A simulated corporate environment with specialized AI agents organized in hierarchical teams*
-
----
+A hierarchical collection of specialized AI agent definitions, organized like a corporate structure. Each agent is a complete persona with strategic posture, capabilities, and execution protocols.
 
 ## Overview
 
-Paperclip Companies is an organizational structure repository that models a complete corporate environment using specialized AI agents. Each agent represents a specific role with defined responsibilities, expertise areas, and decision-making authority, all working together through the Paperclip coordination framework.
+Paperclip Companies is a framework for defining AI agents using a standardized 4-file format. Agents are organized by function and seniority level, from C-suite executives to individual contributors.
 
-**Total Agents**: 60+ across 4 organizational levels
-**Structure**: Hierarchical reporting with clear authority lines
-**Purpose**: Demonstrate multi-agent collaboration in a realistic corporate setting
-
----
-
-## Organizational Hierarchy
+## Repository Structure
 
 ```
-CEO (1)
-│
-├─ VP Level (12) - Strategic Leadership
-│   ├─ VP-Product
-│   ├─ VP-Engineering
-│   ├─ VP-Marketing
-│   ├─ VP-Sales
-│   ├─ VP-Customer-Success
-│   ├─ VP-Finance
-│   ├─ VP-Operations
-│   ├─ VP-Research-Development
-│   ├─ VP-Business-Development
-│   ├─ VP-Information-Security
-│   ├─ VP-Legal
-│   └─ VP-Agent-Resources
-│
-├─ Director Level (4) - Operational Management
-│   ├─ Director-Design (NEW)
-│   ├─ Director-Engineering
-│   ├─ Director-Product
-│   └── Engineering-Manager
-│
-├─ Engineering Team (23) - Technical Specialists
-│   ├─ AI/ML: autonomous-optimization-architect, ai-data-remediation-engineer
-│   ├─ Backend: backend-architect, software-architect, database-optimizer
-│   ├─ DevOps: devops-automator, sre, incident-response-commander
-│   ├─ Frontend: frontend-developer, senior-developer, mobile-app-builder
-│   ├─ Platform: embedded-firmware-engineer, wechat-mini-program-developer
-│   ├─ Security: security-engineer, threat-detection-engineer
-│   └─ Specialized: solidity-smart-contract-engineer, rapid-prototyper
-│
-├─ Design Team (8) - Creative & Experience Specialists
-│   ├─ UX/UI Focus:
-│   │   ├── UX Architect
-│   │   ├── UX Researcher
-│   │   ├── UI Designer
-│   │   └── Visual Storyteller
-│   └─ Technical/Graphics Focus:
-│       ├── Inclusive Visuals Specialist
-│       ├── Whimsy Injector
-│       ├── Image Prompt Engineer
-│       └── Brand Guardian
-│
-└─ Other Functional Agents (~12) - Domain Specialists
-    ├─ Executive: ceo, cfo, cmo, coo, cto
-    ├─ Operations: pm, qa, researcher, engineer, devops, designer, general
+companies/
+├── default/          # Template agents (ceo, cto, engineer, etc.)
+├── vp/              # VP-level strategic leadership (12 agents)
+├── director/        # Director-level operational management
+├── engineering/     # Technical specialists (23 agents)
+├── design/          # Creative & UX specialists
+├── game-development/# Game dev specialists
+└── AGENTS.md        # Repository-wide guidelines
 ```
 
----
+## The 4-File Agent Format
 
-## Quick Navigation
+Every agent in this repository consists of exactly 4 files:
 
-| Directory | Purpose | Agent Count |
-|-----------|---------|-------------|
-| `vp/` | VP-level strategic leadership | 12 |
-| `director/` | Director-level operational management | 4 |
-| `engineering/` | Technical specialists and ICs | 23 |
-| `design/` | Creative, UX, and brand specialists | 8 |
-| `default/` | Template agents for reference | 12 |
+| File | Purpose | Key Sections |
+|------|---------|--------------|
+| `SOUL.md` | Persona & identity | Strategic Posture, Voice & Tone, Critical Rules, Success Metrics |
+| `AGENTS.md` | Capabilities & authority | Memory system, Safety, References |
+| `HEARTBEAT.md` | Execution checklist | Identity check, Planning, Assignments, Delegation, Extraction |
+| `TOOLS.md` | Skills & technologies | Core skills, Domain tools, Integration |
 
----
+## Quick Start
 
-## Agent Structure
+### Using an Existing Agent
 
-Each agent follows the **Paperclip 4-file format**:
-
-```
-agent-directory/
-├── SOUL.md         # Identity, personality, strategic posture
-├── HEARTBEAT.md    # Execution checklist, workflow processes
-├── AGENTS.md       # Authority, reporting, relationships
-└── TOOLS.md        # Skills, technologies, tools
-```
-
-### File Purpose
-
-- **SOUL.md**: Who you are - role definition, core responsibilities, voice & tone, decision framework
-- **HEARTBEAT.md**: How you work - execution checklist, fact extraction, quality gates
-- **AGENTS.md**: Your authority - reporting structure, decision rights, delegation framework
-- **TOOLS.md**: What you can do - skills, tools, platforms, best practices
-
----
-
-## Recent Updates
-
-### 2026-03-20: Design Team Conversion
-**Added 9 new agent directories** to convert standalone design agents to Paperclip format:
-
-**New Director Role**:
-- `director/design-director/` - Strategic leadership for all design functions, reports to VP-Product
-
-**New Specialist Agents**:
-- `design/ux-architect/` - CSS architecture, design systems, responsive layouts
-- `design/ux-researcher/` - User research, usability testing, insights
-- `design/ui-designer/` - Component libraries, accessibility, pixel-perfect specs
-- `design/visual-storyteller/` - Video, data viz, photography, cross-platform content
-- `design/inclusive-visuals-specialist/` - AI bias mitigation, cultural accuracy
-- `design/whimsy-injector/` - Micro-interactions, gamification, Easter eggs
-- `design/image-prompt-engineer/` - AI prompt engineering, photography expertise
-- `design/brand-guardian/` - Brand strategy, governance, trademark protection
-
-**Archive Created**: Original 8 standalone `.md` files moved to `design/legacy-design-docs/`
-
----
-
-## Getting Started
-
-### For New Contributors
-
-1. **Understand the structure**: Read this README and explore the directory organization
-2. **Pick an agent**: Choose based on your task's domain (engineering, design, strategy)
-3. **Review the agent's files**: Start with `SOUL.md` to understand their role
-4. **Check HEARTBEAT**: See how they execute work and produce deliverables
-5. **Coordinate**: Use the Paperclip control plane to assign tasks and orchestrate
-
-### For Paperclip Integration
-
-All agents are configured to work with the Paperclip coordination system:
-
-- Each agent has a home directory (`$AGENT_HOME`)
-- Agents reference `para-memory-files` skill for knowledge management
-- Execution follows heartbeat checklists
-- Cross-agent coordination via delegation frameworks
-- Fact extraction into memory stores for institutional knowledge
-
-### For Development Tasks
+Browse the directory structure to find an agent that matches your needs:
 
 ```bash
-# Explore agent capabilities
-ls vp/ director/ engineering/ design/
+# List all engineering agents
+ls engineering/
 
-# Read specific agent definition
-cat design/ux-architect/SOUL.md
-cat engineering/frontend-developer/TOOLS.md
-
-# Check agent relationships
-cat director/design-director/AGENTS.md
+# View an agent's SOUL.md to understand their persona
+cat engineering/frontend-developer/SOUL.md
 ```
 
----
+### Creating a New Agent
 
-## Key Design Principles
-
-### Organizational Clarity
-- **Clear reporting lines**: Every agent knows who they report to and who reports to them
-- **Specialized roles**: One agent = one clear domain of expertise
-- **Minimal overlap**: Responsibilities are distinct and well-bounded
-
-### Interoperability
-- **Standard format**: All agents use the same 4-file structure
-- **Shared skills**: Common skills like `para-memory-files` enable coordination
-- **Delegation patterns**: Directors delegate to specialists; cross-functional collaboration documented
-
-### Scalability
-- **Flat where possible**: Specialists report to directors, no unnecessary layers
-- **Composable teams**: New agents can be added without restructuring
-- **Clear interfaces**: AGENTS.md defines authority boundaries
-
----
-
-## Development Commands
-
-### Repository Management
+1. Create a feature branch:
 ```bash
-git status --porcelain          # Check working tree
-git diff --no-pager             # View unstaged changes
-git log --oneline -10           # Recent commit history
+git checkout -b add-{agent-name}
 ```
 
-### File Exploration
+2. Create the agent directory:
 ```bash
-find . -name "*.md" -o -name "*.json" | head -20
-ls -la vp/ director/ engineering/ design/
+mkdir -p {category}/{agent-name}
 ```
 
-### Search Patterns
+3. Copy template files:
 ```bash
-grep -r "paperclip" .           # Find Paperclip references
-grep -r "reports to" .          # Find reporting relationships
+cp default/ceo/SOUL.md {category}/{agent-name}/
+cp default/ceo/AGENTS.md {category}/{agent-name}/
+cp default/ceo/HEARTBEAT.md {category}/{agent-name}/
+cp default/ceo/TOOLS.md {category}/{agent-name}/
 ```
 
----
+4. Customize the files for your agent's role and personality
 
-## Architecture Highlights
+5. Commit and push:
+```bash
+git add {category}/{agent-name}/
+git commit -m "feat: add {agent-name} agent"
+git push origin add-{agent-name}
+```
 
-### Agent Categories
+## Agent Categories
 
-**Strategic (VP Level)**: Set direction, allocate resources, make high-level decisions
-**Operational (Director Level)**: Execute strategy, manage teams, coordinate functions
-**Technical (Engineering)**: Build and maintain systems, solve technical problems
-**Creative (Design)**: User experience, visual design, brand, content creation
-**Domain (Default)**: Cross-functional specialists (PM, QA, Researcher, etc.)
+### Executive (default/)
+Template agents that serve as the foundation for all other agents. Start here to understand the format.
 
-### Coordination Patterns
+- **CEO**: Strategic leadership, vision, and final decision authority
+- **CTO**: Technical vision and architecture oversight
+- **Engineer**: Individual contributor baseline
 
-- **Top-down**: VPs set strategy, Directors plan execution, Agents execute
-- **Cross-functional**: Agents coordinate across teams for integrated deliverables
-- **Parallel execution**: Independent tasks can run simultaneously
-- **Quality gates**: HEARTBEAT checklists ensure consistent execution
+### VP-Level (vp/)
+Strategic leadership agents focused on high-level direction and cross-functional coordination.
 
----
+### Director-Level (director/)
+Operational management agents that bridge strategy and execution.
+
+### Engineering (engineering/)
+Technical specialists organized by domain expertise:
+
+- **Frontend Developer**: React, TypeScript, UI/UX implementation
+- **Backend Architect**: System design, APIs, infrastructure
+- **DevOps Engineer**: CI/CD, cloud infrastructure, automation
+- **Data Engineer**: Pipelines, warehousing, analytics
+- And more...
+
+### Design (design/)
+Creative and UX specialists for visual and experiential design work.
+
+### Game Development (game-development/)
+Specialized agents for game design, development, and production.
+
+## File Format Reference
+
+### SOUL.md Structure
+
+```markdown
+# SOUL.md -- {Agent Name}
+
+You are the {Agent Name}.
+
+## Strategic Posture
+
+- Default to action over analysis
+- Protect team autonomy
+- Own the outcome, not just the output
+- [8-12 more principles...]
+
+## Voice and Tone
+
+- Lead with the constraint
+- Quantify the tradeoff
+- Disagree and commit when needed
+- [6-8 more communication principles...]
+
+## Critical Rules
+
+### {Category} Rules
+- **MANDATORY**: Never compromise on this
+- Always validate before proceeding
+- Never skip the verification step
+
+## Success Metrics
+
+- Zero undefined behavior
+- All decisions documented
+- < 5 minute response time
+- [3-5 more measurable outcomes...]
+```
+
+### AGENTS.md Template
+
+```markdown
+You are the {Agent Name}.
+
+Your home directory is $AGENT_HOME. Everything personal to you -- life, memory, knowledge -- lives there.
+
+## Memory and Planning
+
+You MUST use the `para-memory-files` skill for all memory operations: storing facts, writing daily notes, creating entities, running weekly synthesis, recalling past context, and managing plans.
+
+## Safety Considerations
+
+- Never exfiltrate secrets or private data.
+- Do not perform any destructive commands unless explicitly requested by the {reporting authority}.
+
+## References
+
+- `$AGENT_HOME/HEARTBEAT.md` -- execution and extraction checklist
+- `$AGENT_HOME/SOUL.md` -- who you are and how you should act
+- `$AGENT_HOME/TOOLS.md` -- tools you have access to
+```
 
 ## Contributing
 
-### Adding a New Agent
+### Before Adding an Agent
 
-1. **Choose category**: VP, Director, Engineering, Design, or Default
-2. **Create directory**: `mkdir -p [category]/[agent-name/`
-3. **Create 4 files**: Use existing agents as templates
-4. **Define relationships**: Set reporting lines in AGENTS.md
-5. **Update documentation**: Add to README and relevant quick-ref files
+Check the [AGENTS.md](./AGENTS.md) file for:
+- Complete validation checklist
+- Writing style guidelines
+- Naming conventions
+- Cross-reference patterns
 
-### Agent Creation Best Practices
+### Validation Checklist
 
-- Follow the 4-file structure exactly
-- Use existing agents as templates for tone and depth
-- Define clear, bounded responsibilities
-- Document relationships and authority explicitly
-- Include practical skills and tools knowledge
-- Add safety considerations appropriate to the role
+Before submitting a new agent, verify:
 
----
+- [ ] All 4 files exist (SOUL.md, AGENTS.md, HEARTBEAT.md, TOOLS.md)
+- [ ] Directory name uses lowercase-hyphen format
+- [ ] SOUL.md has Strategic Posture, Voice & Tone, Critical Rules, Success Metrics
+- [ ] AGENTS.md references para-memory-files skill
+- [ ] HEARTBEAT.md follows the 8-step template
+- [ ] TOOLS.md lists relevant skills and tools
+- [ ] No trailing whitespace in any file
+- [ ] Consistent formatting
 
-## Resources
+### Code Style
 
-- **CLAUDE.md** - Claude Code specific guidance for this repository
-- **Agent SOUL.md files** - Role definitions and capabilities
-- **Agent HEARTBEAT.md files** - Execution processes and checklists
+- **Headers**: Use ATX style (`#` not `===`)
+- **Line length**: Wrap at ~100 characters
+- **Lists**: Use `-` for unordered, `1.` for ordered
+- **Code blocks**: Always specify language
+- **Voice**: Active voice, present tense
+- **Rules**: Imperative form ("Never do X" not "You should not do X")
 
----
+## Examples
 
-## License & Usage
+### Well-Structured Agents
 
-This repository is a **simulated organizational structure** for demonstrating multi-agent AI coordination. Agents are designed to work with the Paperclip control plane for task orchestration and knowledge management.
+- `default/ceo/` - The canonical template
+- `engineering/frontend-developer/` - Good technical agent example
+- `engineering/backend-architect/` - Clean, minimal structure
 
----
+### Directory Naming
 
-**Maintained by**: The Paperclip Companies architecture team
-**Last updated**: 2026-03-21
-**Total agents**: 60+
-**Levels**: CEO → VP → Director → Engineering/Design/Functional ICs
+✅ Good: `backend-architect`, `frontend-developer`, `devops-engineer`
+❌ Bad: `BackendArchitect`, `senior-frontend-software-engineer`, `backend_architect`
 
----
+## Acknowledgments
 
-*Building the future of multi-agent collaboration, one specialized role at a time.*
+This repository's agent definitions are inspired by and reference:
+
+- **[agency-agents](https://github.com/msitarzewski/agency-agents)** — A collection of AI agent personas for various business and technical roles
+- **[awesome-openclaw-agents](https://github.com/mergisi/awesome-openclaw-agents)** — Curated list of OpenClaw agents and resources
+
+These projects provided valuable patterns and inspiration for the agent structure and organizational approach used here.
+
+## License
+
+MIT License — See [LICENSE](./LICENSE) for details.
+
+## Questions?
+
+- Check `default/ceo/` for the canonical template
+- Look at existing agents in the same category for domain-specific patterns
+- Follow the organizational hierarchy in AGENTS.md
