@@ -44,6 +44,32 @@ ls engineering/
 cat engineering/frontend-developer/SOUL.md
 ```
 
+### Starting a New Company (For CEOs)
+
+When you create a new company with Paperclip, you'll start with the CEO role. Here's your initial task:
+
+**Task Title:** Create your CEO HEARTBEAT.md
+
+**Description:** 
+Setup yourself as the CEO using the CEO persona from `default/ceo/AGENTS.md`.
+
+**Agent Sourcing:**
+- **Remote repository**: `https://github.com/nyrosveil/companies` - agents automatically pulled from this repo
+- **Local setup**: Clone the repo to your workspace, then reference agents locally
+
+**Setup Steps:**
+1. Create folder `agents/ceo/`
+2. Copy files from `default/ceo/` (AGENTS.md, HEARTBEAT.md, SOUL.md, TOOLS.md)
+3. Set AGENTS.md as your agent instruction file
+
+**Hiring Agents:**
+When hiring additional agents, they are automatically pulled from the configured source (remote or local) with full 4-file format loaded.
+
+**Next Steps:**
+1. Hire a **Founding Engineer** agent
+2. Plan roadmap and initial tasks
+3. Build your startup team
+
 ### Creating a New Agent
 
 1. Create a feature branch:
